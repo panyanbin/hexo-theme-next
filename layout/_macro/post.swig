@@ -218,9 +218,11 @@
     {### END POST BODY ###}
     {#####################}
 
-    {%- if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
-      {{ partial('_partials/post/post-related.swig') }}
-    {%- endif %}
+    {# 注释此位置
+      {%- if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
+        {{ partial('_partials/post/post-related.swig') }}
+      {%- endif %}
+    #}
 
     {%- if not is_index %}
       {{- next_inject('postBodyEnd') }}

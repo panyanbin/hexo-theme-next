@@ -32,6 +32,11 @@
           {% block sidebar %}{% endblock %}
         {%- endif %}
       </div>
+
+      {%- if theme.related_posts.enable %}
+        {# 自定义推荐 #}
+        {% include '_partials/my-post-related.swig' %}
+      {%- endif %}
     </main>
 
     <footer class="footer">
