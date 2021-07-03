@@ -7,6 +7,9 @@
 
 {% block content %}
 
+  {# 主页隐藏的title，主要用于seo处理 #}
+  <h1 style="display: none">{{ title }}</h1>
+
   {%- for post in page.posts.toArray() %}
     {{ partial('_macro/post.swig', {post: post, is_index: true}) }}
   {%- endfor %}
